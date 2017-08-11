@@ -1,0 +1,25 @@
+#myCarousel {
+    height: auto;
+}
+
+.carousel-inner .item{
+    height: auto;
+}
+
+.carousel-inner .item img{
+    width: 100%;
+    height:400px; 
+}
+
+.navbar-nav{
+    margin-left:320px;
+    width:700px;
+}
+.navbar-nav li{
+    width: 30%;
+}
+.navbar-nav li a{
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: center;
+}
