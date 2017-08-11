@@ -10,16 +10,117 @@
     width: 100%;
     height:400px; 
 }
+.header{
+    width: 100%;
+    min-width: 1200px;
+    height: 134px;
+    overflow: hidden;
+    background: url(../img/company_r1_c1.jpg) top left repeat-x;
+   
+    clear: both;
+
+}
+.headerdiv{
+   width: 1000px;
+    height: 134px;
+    overflow: hidden;
+    background: url(../img/company_r1_c2.jpg) top left no-repeat;
+    margin: 0 auto;
+    clear: both;
+}
+
+@media (min-width: 768px){
+    .navbar-header {
+        float: left;
+        margin-top: -14px;
+    }
+}
 
 .navbar-nav{
     margin-left:320px;
     width:700px;
+    margin-top:-15px;
 }
 .navbar-nav li{
     width: 30%;
+    
 }
-.navbar-nav li a{
+.navbar-default .navbar-nav li a{
     font-size: 16px;
     box-sizing: border-box;
     text-align: center;
+    display: block;
+    color: #fff;
+}
+
+.navbar-default .navbar-nav li a:hover{
+   color: #fff;
+}
+.navbar-default .navbar-nav li a:focus{
+   color: #fff;
+}
+.navbar-nav li:hover{
+    background: url(../img/sub_menu_bg.jpg) top left repeat-x;
+    background-size: 100% 100%;
+}
+.main .container-right{
+    float: right;
+    height: 300px;
+    width: 260px;
+    margin-right: 50px;
+    border-radius: 3px;
+}
+
+.login{
+    height:inherit;
+}
+.control-label{
+    font-size: 12px;
+    padding: 10px 0;
+}
+.login .col-sm-9{
+ padding:0 5px;
+}
+.login .col-sm-10{
+    padding: 0 28px;
+}
+.hide{
+    display: none;
+}
+.forget-password{
+    margin-left: 160px;
+}
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: 900px;
+    height: 800px;
+    margin-left: 100px;
+}
+.register{
+    height: 600px;
+}
+.panel-heading{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.box-padding{
+    padding: 0px;
+}
+.register .form-horizontal{
+    margin-top: 100px;
+}
+.register .form-group{
+    margin-bottom: 30px;
+    height: 34px;
+}
+.register-btn{
+    width: 360px;
+    height: 40px;
+}
+.register .col-sm-6{
+    padding: 0px;
 }
