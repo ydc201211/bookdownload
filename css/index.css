@@ -65,7 +65,7 @@
 }
 .main .container-right{
     float: right;
-    height: 300px;
+    height: 318px;
     width: 260px;
     margin-right: 50px;
     border-radius: 3px;
@@ -94,17 +94,20 @@ a{
     text-decoration: none;
 }
 
-.container{
-    width: 900px;
-    height: 800px;
-    margin-left: 100px;
-}
-
 .panel-heading{
     font-size: 16px;
     font-weight: bold;
 }
 
-.box-padding{
-    padding: 0px;
+.container{
+    width: 900px;
+    height: auto;
+    margin-left: 100px;
+}
+
+.page-content{
+    width: inherit;
+    margin: 0;
+    padding: 0;
+    height: 600px;
 }

@@ -5,16 +5,13 @@ $(function() {
          
         switch (e.target.id) {
             case "to-home":
-                $(".container").children(".home")
-                    .removeClass("hide").siblings().addClass("hide");
+                $("iframe").attr("src","page/home.html");
                 break;
             case "to-download":
-                $(".container").children(".download")
-                    .removeClass("hide").siblings().addClass("hide");
+                $("iframe").attr("src","page/download.html");
                 break;
             case "to-register":
-                $(".container").children(".register")
-                    .removeClass("hide").siblings().addClass("hide");
+                $("iframe").attr("src","page/register.html");
                 break;
             default:
                 break;
