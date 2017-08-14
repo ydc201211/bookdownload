@@ -49,8 +49,8 @@ function initTable(){
             align : 'center',
             valign : 'middle'
         },
-         {
-            field : 'createTime',
+        {
+                field : 'createTime',
             title : 'Create Time',
             align : 'center',
             valign : 'left',
