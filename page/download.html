@@ -15,39 +15,28 @@
         
         <!-- 引入本地css -->
         <link href="../css/download.css" rel="stylesheet">
-
+            
         <!-- 引入jquery -->
         <script src=" https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
        
         <!-- 引入bootstrap.js -->
         <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         
+        
         <!-- 引入bootstrap-table.js -->
-        <script src="/js/bootstrap/bootstrap-table.js"></script>
-        <script src="/js/bootstrap/bootstrap-table-zh-CN.js"></script>
+        <script src="../js/bootstrap/bootstrap-table.js" ></script>
+        <script src="../js/bootstrap/bootstrap-table-zh-CN.js"></script>
 
+        <!-- 引入本地js -->
+        <script src="../js/download.js" type="text/javascript"></script>
     </head>
     <body>
      <div class="panel panel-default register">
             <div class="panel-heading">资源下载</div>
             <div class="panel-body">
                  
-                <table id="demo-table" 
-                        data-toggle="table" 
-                        data-url="data1.json"
-                        data-method="POST"
-                        data-url="data.json"
-                        data-page-number="1"
-                        data-page-size="10"
-                        data-side-pagination="server"
-                         data-show-pagination-switch="true">
-                    <thead>
-                        <tr>
-                            <th data-field="id">Item ID</th>
-                            <th data-field="name">Item Name</th>
-                            <th data-field="price">Item Price</th>
-                        </tr>
-                    </thead>
+                <table id="demo-table" >
+                
                 </table>
             </div>
         </div>

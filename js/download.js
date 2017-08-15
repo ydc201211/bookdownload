@@ -8,24 +8,24 @@ function doQuery(params){
 }
 
 function initTable(){
-    var url = "user.do?method=listUsers&random="+Math.random();
+    var url = "http://localhost:8080/getData?random="+Math.random();
     $('#demo-table').bootstrapTable({
         method:'POST',
         dataType:'json',
-        contentType: "application/x-www-form-urlencoded",
+        contentType: "application//x-www-form-urlencoded;charset=utf-8",
         cache: false,
         striped: true,                      //是否显示行间隔色
-         detailView: true,                  //父子表
+        detailView: true,                  //父子表
         sidePagination: 'server',           //分页方式：client客户端分页，server服务端分页（*）
         url:url,
-        height: $(window).height() - 110,
+        showRefresh:'true',
         width:$(window).width(),
         showColumns:true,
         pagination:true,
         queryParams : queryParams,
         minimumCountColumns:2,
         pageNumber:1,                       //初始化加载第一页，默认第一页
-        pageSize: 20,                       //每页的记录行数（*）
+        pageSize: 10,                       //每页的记录行数（*）
         pageList: [10, 25, 50, 100],        //可供选择的每页的行数（*）
         uniqueId: 'id',                     //每一行的唯一标识，一般为主键列
         showExport: true,                    
@@ -41,19 +41,33 @@ function initTable(){
         },
         {
             field : 'id',
-            title : 'ID',
+            title : '',
             visible:'false'
-        }, {
-            field : 'bookName',
-            title : '书名',
+        },
+         {
+            field : 'bookNo',
+            title : '书籍编号',
             align : 'center',
             valign : 'middle'
         },
         {
-                field : 'createTime',
-            title : 'Create Time',
+            field : 'bookName',
+            title : '书籍名',
             align : 'center',
-            valign : 'left',
+            valign : 'middle'
+        },
+        {
+            field : 'bookChapter',
+            title : '书籍章节',
+            align : 'center',
+            valign : 'middle'
+        },
+        {
+            field : 'createTime',
+            title : 'Create Time',
+            halign : 'center',
+            valign : 'middle',
+            visible: 'false',
             formatter : function (value, row, index){
                 return new Date(value).format('yyyy-MM-dd hh:mm:ss');
             }
