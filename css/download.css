@@ -2,3 +2,32 @@
     font-size: 16px;
     font-weight: bold;
 }
+a{
+    text-decoration: none;
+}
+a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+.download-btn{
+    display: block;
+    width: 60px;
+    height: 30px;
+    background:#9844af;
+
+    margin: auto;
+    cursor: pointer;
+    padding: 5px;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px #ccc;
+}
+.download-btn:hover{
+    background: #690684;
+}
+.glyphicon-minus:before{
+   color: #9844af; 
+}
+.glyphicon-plus:before{
+    color: #9844af; 
+}
