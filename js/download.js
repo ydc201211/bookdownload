@@ -8,7 +8,7 @@ function doQuery(params){
 
 // 初始化主表
 function initTable(){
-    var url = "http://localhost:8080/getBooks?random="+Math.random();
+    var url = "http://localhost:3000/books/getBook";
     
     $('#demo-table').bootstrapTable({
         method:'POST',
@@ -43,7 +43,7 @@ function initTable(){
         //     }
         // },
         {
-            field : 'bookNo',
+            field : 'bid',
             title : '书籍编号',
             align : 'center',
             valign : 'middle'

@@ -31,3 +31,6 @@ a:hover{
 .glyphicon-plus:before{
     color: #9844af; 
 }
+.panel-body{
+    height: 545px;
+}

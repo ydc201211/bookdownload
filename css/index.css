@@ -15,7 +15,7 @@
     min-width: 1200px;
     height: 134px;
     overflow: hidden;
-    background: url(../img/company_r1_c1.jpg) top left repeat-x;
+    background: url(../images/company_r1_c1.jpg) top left repeat-x;
    
     clear: both;
 
@@ -24,7 +24,7 @@
    width: 1000px;
     height: 134px;
     overflow: hidden;
-    background: url(../img/company_r1_c2.jpg) top left no-repeat;
+    background: url(../images/company_r1_c2.jpg) top left no-repeat;
     margin: 0 auto;
     clear: both;
 }
@@ -42,7 +42,7 @@
     margin-top:-15px;
 }
 .navbar-nav li{
-    width: 30%;
+    width: 19%;
     
 }
 .navbar-default .navbar-nav li a{
@@ -109,5 +109,7 @@ a{
     width: inherit;
     margin: 0;
     padding: 0;
-    height: 600px;
+    height: 800px;
+    
 }
+

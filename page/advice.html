@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="../css/advice.css" rel="stylesheet">
+        
+        <!-- 最新版本的 bootstrap.css -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+          
+        <!-- 引入主题 -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        
+        <!-- 引入bootstrap-table.css -->
+        <link href="../css/bootstrap/bootstrap-table.css" rel="stylesheet">
+        
+        <!-- 引入本地css -->
+        <link href="../css/advice.css" rel="stylesheet">
+            
+        <!-- 引入jquery -->
+        <script src=" https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- 引入bootstrap.js -->
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        
+        <!-- 引入bootstrap-table.js -->
+        <script src="../js/bootstrap/bootstrap-table.js" ></script>
+        <script src="../js/bootstrap/bootstrap-table-zh-CN.js"></script>
+
+        <!-- 引入本地js -->
+        <script src="../js/advice.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="panel panel-default advice">
+            <div class="panel-heading">请您对我们提出宝贵意见和建议，您留下的每个意见都是我们产品不断改进的动力！</div>
+                <div class="panel-body">
+                    <form class="form-horizontal">
+                        <!-- 问题描述 -->
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">问题反馈：</label>
+                            <textarea class="form-control advice-box" rows="8" placeholder="问题描述" required></textarea>   
+                        </div>
+                        <!-- 电话输入框 -->
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">电话：</label>
+                            <div class="col-sm-4 box-padding">
+                                <input type="text" class="form-control"
+                                    placeholder="请留下你的电话,以方便我们与您联系" min-length="11" max-length="11" >
+                            </div>
+                        </div>
+                        <!-- 注册按钮 -->
+                        <div class="form-group">
+                            <div class="col-sm-offset-8 col-sm-5">
+                                <button type="submit" class="btn btn-primary advice-btn">提交意见</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>

@@ -13,6 +13,12 @@ $(function() {
             case "to-register":
                 $("iframe").attr("src","page/register.html");
                 break;
+            case "to-advice":
+                $("iframe").attr("src","page/advice.html");
+            break;
+            case "to-operation":
+                $("iframe").attr("src","page/operation.html");
+            break;
             default:
                 break;
         
