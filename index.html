@@ -18,7 +18,7 @@
         <script src="js/index.js" type="text/javascript"></script>
         <link href="css/index.css" rel="stylesheet">
     </head>
-    <body>
+    <body  onload="iframeResize()">
         <div class="banner">
             <div id="myCarousel" class="carousel slide">
                 <!-- 轮播（Carousel）指标 -->
@@ -51,22 +51,15 @@
             </ul> 
         </div> -->
        
-        <div class="navbar navbar-default header" role="navigation">
-            <div class="headerdiv">
-                
-                <div class="navbar-header">
-                　  <a href="#" class="navbar-brand">
-                        <img src="images/logo.jpg" alt="">
-                    </a>
-                </div>
-                <ul class="nav navbar-nav mynav">
-                    <li><a id="to-home" href="javascript:void(0)">首页</a></li>
-                    <li><a id="to-download" href="javascript:void(0)">资源下载</a></li>
-                    <li><a id="to-register" href="javascript:void(0)">注册会员</a></li>
-                    <li><a id="to-operation" href="javascript:void(0)">芝麻开门</a></li>
-                    <li><a id="to-advice" href="javascript:void(0)">建言献策</a></li>
-                </ul>
-            </div>   
+        <div class="navbar navbar-default" role="navigation">
+            <ul class="nav nav-pills mynav">
+                <li class="active"><a id="to-home" href="javascript:void(0)">首页</a></li>
+                <li><a id="to-download" href="javascript:void(0)">资源下载</a></li>
+                <li><a id="to-register" href="javascript:void(0)">注册会员</a></li>
+                <li><a id="to-operation" href="javascript:void(0)">芝麻开门</a></li>
+                <li><a id="to-advice" href="javascript:void(0)">建言献策</a></li>
+            </ul>
+        
         </div>
 
         <div class="main">
@@ -121,7 +114,9 @@
             </div>
 
             <div class="container">
-                <iframe class="page-content" scrolling="no" frameborder="0" src="page/home.html">
+                
+                <iframe class="page-content" name="childFrame" id="childFrame" 
+                    marginWidth="0" frameSpacing="0" marginHeight="0" scrolling="no" frameborder="0" src="page/home.html">
                 
                 </iframe>
                 <!-- <div class="panel panel-default hide home" id="home">
