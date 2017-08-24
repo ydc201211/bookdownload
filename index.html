@@ -18,7 +18,7 @@
         <script src="js/index.js" type="text/javascript"></script>
         <link href="css/index.css" rel="stylesheet">
     </head>
-    <body  onload="iframeResize()">
+    <body >
         <div class="banner">
             <div id="myCarousel" class="carousel slide">
                 <!-- 轮播（Carousel）指标 -->
@@ -115,8 +115,8 @@
 
             <div class="container">
                 
-                <iframe class="page-content" name="childFrame" id="childFrame" 
-                    marginWidth="0" frameSpacing="0" marginHeight="0" scrolling="no" frameborder="0" src="page/home.html">
+                <iframe class="page-content" name="childFrame" id="childFrame"
+                    frameSpacing="0" scrolling="no" frameborder="0" onload="setIframeHeight(this)" src="page/home.html">
                 
                 </iframe>
                 <!-- <div class="panel panel-default hide home" id="home">

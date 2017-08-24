@@ -31,3 +31,27 @@ a:hover{
 .glyphicon-plus:before{
     color: #9844af; 
 }
+.tool-download h4{
+    margin-left: 10px;
+}
+.tool-download ul{
+    list-style: none;
+    height: 20px;
+   
+    margin-bottom: 20px;
+}
+.tool-download ul li{
+    float: left;
+    width: 16%;
+    font-size: 14px;
+    text-align: center;
+}
+
+.tool-download ul li:nth-of-type(1) a{
+    background: url(../images/drop-arrow.png) no-repeat left center;
+    padding-left:30px;
+    
+}
+a:hover{
+   color:#23527c;
+}

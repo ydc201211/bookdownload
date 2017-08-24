@@ -4,11 +4,38 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 最新版本的 bootstrap.css -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        
+        <!-- 引入主题 -->
+        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        
+        <!-- 引入jquery -->
+        <script src=" https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        
+        <!-- 引入bootstrap.js -->
+        <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="../js/home.js" type="text/javascript"></script>
         <link href="../css/home.css" rel="stylesheet">
     </head>
     <body>
         <div>
-            书籍介绍
+            <ul class="nav nav-tabs mytabs">
+                <li role="presentation" class="active"><a href="#" id="book-content">内容</a></li>
+                <li role="presentation"><a href="#" id="book-form">形式</a></li>
+                <li role="presentation"><a href="#" id="book-author">作者</a></li>
+            </ul>
+        </div>
+        <div class="box">
+            <div id="box1" class="box-content">
+                1
+            </div>
+            <div id="box2" class="box-content hide">
+                 2   
+            </div>
+            <div id="box3" class="box-content hide">
+                  3     
+            </div>
         </div>
     </body>
 </html>

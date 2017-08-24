@@ -16,8 +16,78 @@
        
         <!-- 引入bootstrap.js -->
         <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-       
+         <!-- 引入city-picker.css -->
+        <link rel="stylesheet" href="../css/operation.css">
+        <script src="../plugins/scroll-nav/js/CateNav.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function(){	
+                $.CateNav('#art_content','#Catalog_box');//第一个参数为存放文章内容的box,第二个参数为存放生成目录的box	
+            })
+        </script>
     </head>
     <body>
+        <div class="warp clear">
+                <!-- 左侧导航 -->
+                <div class="page_left">
+                    <div id="Catalog_box">
+                    </div>
+                </div>
+
+                <!-- 右侧内容 -->
+                <div class="page_right">
+                    <article>
+                        <h1 class="art_title">猕猴桃</h1>
+                        <div class="art_content" id="art_content">
+                            <h2>命名</h2>
+                            <h3>种拉丁名</h3>
+                            <ul><li>Actinidia chinensis Planch. var. chinensis Li in Journ</li></ul>
+                            <h3>种下等级</h3>
+                            <ul>
+                                <li>Actinidia chinensis Planch. f. jinggangshanensis C. F. Liang</li>
+                                <li>Actinidia chinensis Planch. f. jinggangshanensis C. F. Liang</li>
+                                <li>Actinidia chinensis Planch. f. jinggangshanensis C. F. Liang</li>
+                                <li>Actinidia chinensis Planch. f. jinggangshanensis C. F. Liang</li>
+                                <li>Actinidia chinensis Planch. f. jinggangshanensis C. F. Liang</li>
+                                <li>Actinidia chinensis Planch. f. jinggangshanensis C. F. Liang</li>
+                            </ul>
+                            <h2>外观及口感</h2>
+                            <h3>外观特色</h3>
+                            <p>猕猴桃一般是椭圆形的。 墨绿色并带毛的表皮一般不食用，而其内则是呈亮绿色的果肉和一排黑色的种子。</p>
+                            <h3>食用口感</h3>
+                            <p>猕猴桃的质地柔软，味道有时被描述为草莓、香蕉、凤梨三者的混合。因猕猴喜食，故名猕猴桃；亦有说法是因为果皮覆毛，貌似猕猴而得名，是一种品质鲜嫩，营养丰富，风味鲜美，人们喜食的水果，有美容养颜的效果，延迟皮肤衰老的作用，深受各年龄人的喜爱。</p>
+                            
+                            <h2>与中国的历史渊源</h2>
+                            <h3>中国原产地</h3>
+                            <p>中国是猕猴桃的原产地，世界猕猴桃原产地在宜昌市夷陵区雾渡河镇。</p>
+                            <h3>中国多地区所有</h3>
+                            <p>中国猕猴桃之乡江西省奉新县、西安市周至县、宝鸡市眉县、四川省苍溪县、南阳市西峡县以及浙江省江山市、湘西凤凰县、永顺县、广东省和平县、贵州省修文县。湖北省红安县、开阳县、桐梓有野生的猕猴桃。</p>
+                            
+                            <h2>历史记载</h2>
+                            <h3>诗经</h3>
+                            <p>早在公元前的《诗经》中就有了猕猴桃的记载：</p>
+                            <p>	[苌楚] cháng chǔ猕猴桃古名苌楚。《诗经.桧风》中就有：“隰有苌楚，猗傩其枝。”</p>
+                            <p>	选自《诗经·桧风》——《隰有苌楚》：</p>
+                            <p>	隰有苌楚，猗傩其枝，夭之沃沃。乐子之无知。</p>
+                            <p>	隰有苌楚，猗傩其华，夭之沃沃。乐子之无家。</p>
+                            <p>	隰有苌楚，猗傩其实，夭之沃沃。乐子之无室。</p>
+                            <h3>本草纲目</h3>
+                            <p>李时珍在《本草纲目》中描绘猕猴桃的形、色时说：“其形如梨，其色如桃，而猕猴喜食，故有诸名。”</p>
+                            <h3>证类本草</h3>
+                            <p>唐慎徵在《证类本草》上说：味甘酸，生山谷，藤生著树，叶圆有毛，其果形似鸭鹅卵大，其皮褐色，经霜始甘美可食。”这种酸中泛甜，芳香怡人，营养丰富的果实，竟沉睡了几千年，人类真正了解和利用它也不过百余年的历史，长期以来一直是猴子的“仙果”美食。</p>
+                            
+                            <h2>历史介绍</h2>
+                            <h3>原产我国的古老品种</h3>
+                            <p>猕猴桃俗称阳桃、毛桃、山洋桃、毛梨桃等，是原产于我国的古老野生藤本果树。唐《本草拾遗》载：“猕猴桃味咸温无毒，可供药用，主治骨节风，瘫痪不遂，长年白发，痔病，等等。”明代李时珍《本草纲目》记载猕猴
+    
+    桃“其形如梨，其色如酒色而猕猴喜食，故有诸名，闽人呼为阳桃”。说明至少在一千二百多年以前我国已经在庭院中搭架栽植猕猴桃了。浙江黄岩县(浙江省台州市黄岩区)焦坑村的农村还保存有200多年前从深山移植到田边栽植的猕猴桃植株。但从总体上讲，猕猴桃过去在我国基本上处于野生状态，未被开发利用。</p>
+                            <h3>作果树栽培及商品出售</h3>
+                            <p>猕猴桃作为果树栽培并成为商品在20世纪三四十年代的新西兰。1940年，新西兰北岛的几个果园的猕猴桃已有可观的产量。就这样，这种新型的水果在新西兰逐渐引起了人们的重视。经过一段时间的栽培选育，又育出大果品种，1952年，猕猴桃鲜果首次出口到英国伦敦。由新西兰培育出来的品种还被逐渐引种到澳大利亚、美国、丹麦、德国、荷兰、南非、法国、意大利和日本等国。但由于气候等方面的原因，其他国家似乎并未有产业形成。1980年，仅新西兰栽培猕猴桃12300公顷，年产量达2万吨，独占世界市场。</p>
+                            <h3>各地产量</h3>
+                            <p>我国猕猴桃主要分布于陕西、四川、河南、湖南、贵州、浙江、江西等省份。2009年全国猕猴桃栽培面积9.12万公顷，产量83.62万吨。其中陕西栽培面积4.2万公顷、产量51万吨，四川1.31万公顷、产量4.83万吨，河南0.93万公顷、产量17.06万吨，湖南0.90万公顷、产量3.39万吨。陕西为猕猴桃栽培最大的省份，产量和面积分别占到全国的61%和46%。</p>
+                        </div>
+                    </article>
+                </div>
+        </div>
     </body>
+   
 </html>

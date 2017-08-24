@@ -1,0 +1,89 @@
+.my-scrollbar{
+    float: left;
+} 
+.my-scrollbar ul li{
+    clear: both;
+}
+
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font: 14px/1.5 arial,\5b8b\4f53,sans-serif;
+    line-height:24px;
+    color: #333;
+}
+.warp{
+    width:900px;
+    margin:20px auto;
+   
+}
+article{
+    margin:20px 0;
+}
+.clear{
+    clear: both;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: Microsoft YaHei,SimHei,Verdana;
+    color: #000;
+    font-weight: 500;
+}
+h1{
+    font-size: 34px;
+    line-height:34px;
+    padding: 0 0 15px 0;
+}
+h2{
+    font-size: 24px;
+    padding:15px 8px;
+}
+h3{
+    font-size: 18px;
+    padding:15px 16px;
+}
+p{
+    text-indent:2em;
+    margin-left:16px;
+}
+ul{
+    margin-left:4em;
+}
+.page_left{
+    width:150px;
+    float:left;
+}
+.page_right{
+    width:650px;
+    float:right;
+    height: 300px;
+}
+a{
+    color: #666;
+    text-decoration:none;
+}
+a:hover{
+    color:#136ec2;
+}
+#Catalog_box {
+    position:fixed;
+    top:100px;
+    margin-left:10px;
+}
+#Catalog_box .cate-item1 span{
+    color: #999;
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 14px;
+    padding-right: 5px;
+}
+#Catalog_box .cate-item2{
+    padding-left:20px;
+}
+#Catalog_box .cate-item2 span{
+    font-weight: 500;
+}
+#Catalog_box dd.active,#Catalog_box dd.active a{
+    color:#106BC2!important;
+}
