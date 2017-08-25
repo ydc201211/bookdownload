@@ -1,6 +1,5 @@
 $(function () {
     initTable();
-    setSize();
 });
 
 function doQuery(params){
@@ -148,8 +147,4 @@ function getChildTable(index, row, $detail) {
             getChildTalbe(index, row, $Subdetail);
         }
     });
-}
-function setSize(){
-    var h = document.body.scrollHeight;
-    parent.document.getElementById("childFrame").style.height = h + "px";
 }
