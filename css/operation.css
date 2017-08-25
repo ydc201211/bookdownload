@@ -1,3 +1,8 @@
+::-webkit-scrollbar{
+    width: 0px;  
+    height: 40px;  
+    background-color: #F5F5F5;  
+}
 .my-scrollbar{
     float: left;
 } 
@@ -53,11 +58,13 @@ ul{
 .page_left{
     width:150px;
     float:left;
+    
 }
 .page_right{
     width:650px;
     float:right;
     height: 300px;
+    margin-right: 30px;
 }
 a{
     color: #666;

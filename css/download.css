@@ -1,3 +1,8 @@
+::-webkit-scrollbar{
+    width: 0px;  
+    height: 40px;  
+    background-color: #F5F5F5;  
+}
 .panel-heading{
     font-size: 16px;
     font-weight: bold;
@@ -37,8 +42,6 @@ a:hover{
 .tool-download ul{
     list-style: none;
     height: 20px;
-   
-    margin-bottom: 20px;
 }
 .tool-download ul li{
     float: left;

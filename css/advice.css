@@ -1,3 +1,8 @@
+::-webkit-scrollbar{
+    width: 0px;  
+    height: 0px;  
+    background-color: #F5F5F5;  
+}
 .advice-box{
     margin-bottom: 30px;
     width: 52%;

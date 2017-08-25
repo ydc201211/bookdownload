@@ -1,7 +1,4 @@
 $(function() {
-   
-
-   
     $('#myCarousel').carousel({interval:5000});//每隔5秒自动轮播 
     $('.mynav').on('click',function(e) {
         var a = e.target;
@@ -11,37 +8,31 @@ $(function() {
     $('.mynav').on('click',function(e){
          
         switch (e.target.id) {
-            case "to-home":
-                $("iframe").attr("src","page/home.html");
+            case 'to-home':
+                $('iframe').attr('src','page/home.html');
+                $('.container ol li a').text('首页');
                 break;
-            case "to-download":
-                $("iframe").attr("src","page/download.html");
+            case 'to-download':
+                $('iframe').attr('src','page/download.html');
+                $('.container ol li a').text('资源下载');
                 break;
-            case "to-register":
-                $("iframe").attr("src","page/register.html");
+            case 'to-register':
+                $('iframe').attr('src','page/register.html');
+                $('.container ol li a').text('会员注册');
                 break;
-            case "to-advice":
-                $("iframe").attr("src","page/advice.html");
+            case 'to-advice':
+                $('iframe').attr('src','page/advice.html');
+                $('.container ol li a').text('建言献策');
             break;
-            case "to-operation":
-                $("iframe").attr("src","page/operation.html");
+            case 'to-operation':
+                $('iframe').attr('src','page/operation.html');
+                $('.container ol li a').text('芝麻开门');
             break;
             default:
                 break;
         
         }
-    });    
-
-    setIframeHeight(document.getElementById('childFrame'));
+    });
 });
-
-function setIframeHeight(iframe) {
-    if (iframe) {
-        var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
-        if (iframeWin.document.body) {
-            iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
-        }
-    }
-}
     
    
