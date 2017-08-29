@@ -2,7 +2,6 @@ $(function() {
     $('#myCarousel').carousel({interval:5000});//每隔5秒自动轮播 
     $('.mynav').on('click',function(e) {
         var a = e.target;
-        console.log($(a).parent('li').addClass('active').siblings('li'));
         $(a).parent('li').addClass('active').siblings('li').removeClass('active'); 
     });
     $('.mynav').on('click',function(e){

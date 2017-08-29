@@ -1,5 +1,6 @@
 $(function () {
     initTable();
+    var bookList = [];
 });
 
 function doQuery(params){
@@ -82,7 +83,8 @@ function queryParams(params) {
 function responseHandler(res) { 
    
     if (res) {
-        console.log(res);
+        bookList = res.rows;
+        
         return {
             "rows" : res.rows,
             "total" : res.total
@@ -98,16 +100,15 @@ function responseHandler(res) {
 // 生成子表
 function getChildTable(index, row, $detail) {
     
-    var url = 'http://localhost:8080/getChapters?random='+Math.random(); 
-    var parentid = row.bookNo;
+    var url = 'http://localhost:3000/books/getChapter?random='+Math.random(); 
+    
+    var parentId = bookList[index].bid;
     
     var cur_table = $detail.html('<table id="child_table"></table>').find('table');
-    console.log(cur_table);
     $('#child_table').bootstrapTable({
         url: url,
         method: 'POST',
-        queryParams: {parentId: parentid},
-        ajaxOptions: {parentId: parentid},
+        queryParams: {parentId: parentId},
         dataType: 'json',
         contentType: "application/x-www-form-urlencoded;charset=utf-8",
         cache: false,
@@ -121,7 +122,7 @@ function getChildTable(index, row, $detail) {
         },
         columns: [
             {
-                field: 'chapterId',
+                field: 'cid',
                 title: '章节编号',
                 align: 'center',
                
@@ -131,6 +132,14 @@ function getChildTable(index, row, $detail) {
                 title: '章节名',
                 align: 'center',
            
+            },
+            {
+                field: 'chapterSize',
+                title: '章节大小',
+                align: 'center',
+                formatter: function(value) {
+                    return value + "MB";
+                },
             },
             {
                 field: 'downloadUrl',
