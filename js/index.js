@@ -37,12 +37,13 @@ $(function() {
         }
     });
 
+    //点击登录按钮
     $('#login-btn').on('click',function(e) {
+        console.log("kasdakjd");
         var username = $('#inputAccount').val();
         var password = $('#inputPassword').val();
         
         if(account != '' && password != ''){
-            
             $.ajax({
                 type: 'POST',
                 url: 'http://localhost:3000/login',
@@ -59,7 +60,7 @@ $(function() {
                 },
                 fail:function (err) {
                     
-                },
+                }
             });
         }else{
             $("b").remove(); 
