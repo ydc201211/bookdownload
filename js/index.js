@@ -1,9 +1,13 @@
 $(function() {
     $('#myCarousel').carousel({interval:5000});//每隔5秒自动轮播 
+
+    // 首页导航
     $('.mynav').on('click',function(e) {
         var a = e.target;
         $(a).parent('li').addClass('active').siblings('li').removeClass('active'); 
     });
+    
+    // 板块切换
     $('.mynav').on('click',function(e){
          
         switch (e.target.id) {
@@ -32,6 +36,37 @@ $(function() {
         
         }
     });
+
+    $('#login-btn').on('click',function(e) {
+        var username = $('#inputAccount').val();
+        var password = $('#inputPassword').val();
+        
+        if(account != '' && password != ''){
+            
+            $.ajax({
+                type: 'POST',
+                url: 'http://localhost:3000/login',
+                data: {
+                    username: username,
+                    password:password
+                },
+                async:false,
+                dataType: 'json',
+                timeout:3000, //超时时间
+                success: function(result) {
+                    $("b").remove(); 
+                    $("<b style='color:red;margin-left:55px;'>登录成功</b>").insertAfter("#password-form");
+                },
+                fail:function (err) {
+                    
+                },
+            });
+        }else{
+            $("b").remove(); 
+            $("<b style='color:red;margin-left:55px;'>账户或密码不能为空</b>").insertAfter("#password-form");
+        }
+    });
+    
 });
     
    

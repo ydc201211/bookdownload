@@ -9,7 +9,7 @@ function doQuery(params){
 
 // 初始化主表
 function initTable(){
-    var url = "http://localhost:3000/books/getBook";
+    var url = "http://localhost:3000/book/getBook";
     
     $('#demo-table').bootstrapTable({
         method:'POST',
@@ -100,7 +100,7 @@ function responseHandler(res) {
 // 生成子表
 function getChildTable(index, row, $detail) {
     
-    var url = 'http://localhost:3000/books/getChapter?random='+Math.random(); 
+    var url = 'http://localhost:3000/book/getChapter?random='+Math.random(); 
     
     var parentId = bookList[index].bid;
     
