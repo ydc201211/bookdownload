@@ -39,11 +39,11 @@ $(function() {
 
     //点击登录按钮
     $('#login-btn').on('click',function(e) {
-        console.log("kasdakjd");
+        
         var username = $('#inputAccount').val();
         var password = $('#inputPassword').val();
         
-        if(account != '' && password != ''){
+        if(username != '' && password != ''){
             $.ajax({
                 type: 'POST',
                 url: 'http://localhost:3000/login',
@@ -55,15 +55,21 @@ $(function() {
                 dataType: 'json',
                 timeout:3000, //超时时间
                 success: function(result) {
-                    $("b").remove(); 
-                    $("<b style='color:red;margin-left:55px;'>登录成功</b>").insertAfter("#password-form");
+                    console.log(result);
+                    if(result.code === '1001'){
+                        $('.login').addClass('hide');
+                        $('.user-info').removeClass('hide');
+                    }else{
+                        $('b').remove(); 
+                        $("<b style='color:red;margin-left:55px;'>"+result.msg+"</b>").insertAfter("#password-form");
+                    }
                 },
                 fail:function (err) {
-                    
+                    console.log(err);
                 }
             });
         }else{
-            $("b").remove(); 
+            $('b').remove(); 
             $("<b style='color:red;margin-left:55px;'>账户或密码不能为空</b>").insertAfter("#password-form");
         }
     });
