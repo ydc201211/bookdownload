@@ -1,4 +1,6 @@
 $(function() {
+    
+    getStatus();//获取用户状态
     $('#myCarousel').carousel({interval:5000});//每隔5秒自动轮播 
 
     // 首页导航
@@ -51,7 +53,7 @@ $(function() {
                     username: username,
                     password:password
                 },
-                async:false,
+                async:true,
                 dataType: 'json',
                 timeout:3000, //超时时间
                 success: function(result) {
@@ -59,6 +61,7 @@ $(function() {
                     if(result.code === '1001'){
                         $('.login').addClass('hide');
                         $('.user-info').removeClass('hide');
+                        $('#username').html = '123132';
                     }else{
                         $('b').remove(); 
                         $("<b style='color:red;margin-left:55px;'>"+result.msg+"</b>").insertAfter("#password-form");
@@ -75,5 +78,35 @@ $(function() {
     });
     
 });
+function getStatus() {
+    
+    $.ajax({
+        type: 'POST',
+        url: 'http://localhost:3000/login',
+        data: {},
+        async:false,
+        crossDomain: true,
+      
+        xhrFields: {
+            withCredentials:true  //支持附带详细信息
+        },
+        dataType: 'json',
+        timeout:3000, //超时时间
+        success: function(result) {
+            console.log(result);
+            if(result.code === '1001'){
+                $('.login').addClass('hide');
+                $('.user-info').removeClass('hide');
+                $('#username').html = '123132';
+            }else{
+                $('user-info').addClass('hide');
+                $('.login').removeClass('hide');
+            }
+        },
+        fail:function (err) {
+            console.log(err);
+        }
+    });
+}
     
    
