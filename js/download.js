@@ -1,4 +1,5 @@
 $(function () {
+
     initTable();
     var bookList = [];
 });
@@ -9,6 +10,8 @@ function doQuery(params){
 
 // 初始化主表
 function initTable(){
+    alert(document.cookie);
+    console.log(document.cookie);
     var url = "http://localhost:3000/book/getBook";
     
     $('#demo-table').bootstrapTable({

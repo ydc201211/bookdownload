@@ -53,7 +53,10 @@ $(function() {
                     username: username,
                     password:password
                 },
-                async:true,
+                crossDomain: true,
+                xhrFields: {
+                    withCredentials:true  //支持附带详细信息
+                },
                 dataType: 'json',
                 timeout:3000, //超时时间
                 success: function(result) {
@@ -79,7 +82,7 @@ $(function() {
     
 });
 function getStatus() {
-    
+
     $.ajax({
         type: 'POST',
         url: 'http://localhost:3000/login',
