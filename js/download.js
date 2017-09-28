@@ -15,7 +15,7 @@ function initTable(){
     var url = "http://localhost:3000/book/getBookList";
     
     $('#demo-table').bootstrapTable({
-        method:'POST',
+        method:'GET',
         dataType: 'json',
         contentType: "application/x-www-form-urlencoded;charset=utf-8",
         cache: false,
@@ -29,7 +29,12 @@ function initTable(){
         height:$(window).width(),
         showColumns:true,
         pagination:true,
-        queryParams:queryParams,
+        queryParams:function (params) {
+            return { 
+                start: param.offset,
+                offset: param.limit 
+            };
+        },
         queryParamsType:'',
         minimumCountColumns:2,
         pageNumber:1,                       //初始化加载第一页，默认第一页
@@ -66,21 +71,6 @@ function initTable(){
         }]
     });
 }
-
-
-function queryParams(params) {
-    var param = {
-        orgCode : $("#orgCode").val(),
-        userName : $("#userName").val(),
-        startDate : $("#startDate").val(),
-        endDate : $("#endDate").val(),
-        limit : this.limit, // 页面大小
-        offset : this.offset, // 页码
-        pageNumber : this.pageNumber,
-        pageSize : this.pageSize
-    }
-    return param;
-} 
 
 // 用于server 分页，表格数据量太大的话 不想一次查询所有数据，可以使用server分页查询，数据量小的话可以直接把sidePagination: "server"  改为 sidePagination: "client" ，同时去掉responseHandler: responseHandler就可以了，
 function responseHandler(res) { 
