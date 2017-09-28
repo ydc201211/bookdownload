@@ -12,7 +12,7 @@ function doQuery(params){
 function initTable(){
     alert(document.cookie);
     console.log(document.cookie);
-    var url = "http://localhost:3000/book/getBook";
+    var url = "http://localhost:3000/book/getBookList";
     
     $('#demo-table').bootstrapTable({
         method:'POST',

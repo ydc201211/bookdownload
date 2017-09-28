@@ -79,37 +79,39 @@ $(function() {
             $("<b style='color:red;margin-left:55px;'>账户或密码不能为空</b>").insertAfter("#password-form");
         }
     });
-    
-});
-function getStatus() {
 
-    $.ajax({
-        type: 'POST',
-        url: 'http://localhost:3000/login',
-        data: {},
-        async:false,
-        crossDomain: true,
-      
-        xhrFields: {
-            withCredentials:true  //支持附带详细信息
-        },
-        dataType: 'json',
-        timeout:3000, //超时时间
-        success: function(result) {
-            console.log(result);
-            if(result.code === '1001'){
-                $('.login').addClass('hide');
-                $('.user-info').removeClass('hide');
-                $('#username').html = '123132';
-            }else{
-                $('user-info').addClass('hide');
-                $('.login').removeClass('hide');
+    //获取用户状态
+    function getStatus() {
+        
+        $.ajax({
+            type: 'POST',
+            url: 'http://localhost:3000/login',
+            data: {},
+            async:false,
+            crossDomain: true,
+            
+            xhrFields: {
+                withCredentials:true  //支持附带详细信息
+            },
+            dataType: 'json',
+            timeout:3000, //超时时间
+            success: function(result) {
+                console.log(result);
+                if(result.code === '1001'){
+                    $('.login').addClass('hide');
+                    $('.user-info').removeClass('hide');
+                    $('#username').html = '123132';
+                }else{
+                    $('user-info').addClass('hide');
+                    $('.login').removeClass('hide');
+                }
+            },
+            fail:function (err) {
+                console.log(err);
             }
-        },
-        fail:function (err) {
-            console.log(err);
-        }
-    });
-}
+        });
+    }
+});
+
     
    
